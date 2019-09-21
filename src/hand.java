@@ -4,23 +4,23 @@ class Hand{
 
     public Hand(){
         hand = new ArrayList<Card>();
-        drawCard();
-        drawCard();
+        drawRandomCard();
+        drawRandomCard();
     }
 
     public void drawRandomCard(){
 
     }
 
-    public void drawRandomCard(){
-
+    public void drawCard(Card c){
+        hand.add(c);
     }
 
     public int valueOfHand(){
-        int total;
+        int total = 0;
         //First push all aces to the back for easier calculation.
         hand.sort(new Comparator<Card>(){
-            @Override   
+            @Override
             public int compare(Card h1, Card h2) {
                 if(h1 == Card.Ace){
                     return 1;
@@ -66,16 +66,17 @@ class Hand{
                     total += 10;
                     break;
                 case Jack:
-                    total += 11;
+                    total += 10;
                     break;
                 case Queen:
-                    total += 12;
+                    total += 10;
                     break;
                 case King:
-                    total += 13;
+                    total += 10;
                     break;
             }
         }
+        return total;
     }
 
     enum Card{
