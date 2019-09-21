@@ -1,9 +1,10 @@
-package src;
+package tests;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
+import src.Hand;
 import src.Hand.Card;
 
 class handtest {

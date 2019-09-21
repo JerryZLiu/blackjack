@@ -1,7 +1,7 @@
 package src;
 
 import java.util.*;
-class Hand{
+public class Hand{
     ArrayList<Card> hand;
 
     public Hand(){
