@@ -2,7 +2,7 @@
 
 # How to Run
 
-This is a version of Blackjack coded in Java. In order to prevent card counting, the probability of getting any rank of card is equal the whole time.
+This is a version of Blackjack coded in Java. In order to prevent card counting, the probability of getting any rank of card is equal the whole time. The game follows the classic rules of Blackjack. It's a one player game - you face off against the dealer (computer).
 
 You can run the game by cloning this project, then navigating to the blackjack project.
 
