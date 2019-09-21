@@ -1,5 +1,4 @@
 package src;
-
 import java.util.Scanner;
 
 class Blackjack {
@@ -41,6 +40,7 @@ class Blackjack {
 
         	System.out.print("Your hand: ");
         	userHand.printHand();
+        	System.out.println("Dealer's face up card: " + dealerHand.hand.get(1).rank);
 
         	if(dealerHand.valueOfHand() == 21) {
         		System.out.println("Dealer got Blackjack! Here's their hand: ");
