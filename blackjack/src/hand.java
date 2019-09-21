@@ -1,15 +1,19 @@
+package src;
+
 import java.util.*;
 class Hand{
     ArrayList<Card> hand;
 
     public Hand(){
         hand = new ArrayList<Card>();
-        drawRandomCard();
-        drawRandomCard();
     }
-
-    public void drawRandomCard(){
-
+    
+    //
+    public Card drawRandomCard(){
+    	Random r = new Random();
+    	int x = r.nextInt(Card.values().length);
+        hand.add(Card.values()[x]);
+        return Card.values()[x];
     }
 
     public void drawCard(Card c){
@@ -78,8 +82,15 @@ class Hand{
         }
         return total;
     }
+    
+    public void printHand() {
+    	for(Card c: hand) {
+    		System.out.print(c.rank + " ");
+    	}
+    	System.out.println("");
+    }
 
-    enum Card{
+    public enum Card{
         Ace("A"),
         Two("2"),
         Three("3"),
